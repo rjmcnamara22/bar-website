@@ -114,8 +114,8 @@ body {
 
 /* The circle container */
 .circle {
-  width: 600px;
-  height: 600px;
+  width: 70vh;
+  height: 70vh;
   border-radius: 50%;
   background-color: #e9eee6;
   display: flex;
