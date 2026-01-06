@@ -377,8 +377,8 @@ iframe {
 
 @media (max-width: 768px) {
   .about-text {
-    font-size: 1.0rem;
-    line-height: 1.2;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 
   .about {
@@ -388,7 +388,7 @@ iframe {
 
 @media (max-width: 480px) {
   .about-text {
-    font-size: 0.8rem;
-    line-height: 1.0;
+    font-size: 1.1rem;
+    line-height: 1.55;
   }
 }
