@@ -1,6 +1,6 @@
 # McNamara's Pub Website
 
-A static, single-page website for **McNamara's Pub** in Cleveland, Ohio.
+A static, single-page website for **McNamara's Pub**.
 
 ## Overview
 
