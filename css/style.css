@@ -281,6 +281,34 @@ body {
 
 
 
+/* ==== HOURS SECTION ==== */
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  text-align: center;
+  padding: 10px 16px 20px;
+}
+
+.hours-text {
+  font-size: 1.8rem;
+  color: #f7faf6;
+}
+
+.hours-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.hours-list li {
+  font-size: 1.4rem;
+  color: #f7faf6;
+}
+
+
+
 /* ==== CONTACT SECTION ==== */
 .contact {
   display: flex;
@@ -322,7 +350,7 @@ iframe {
   color: #f7faf6;
   text-align: center;
   padding: 20px 40px;
-  margin: 1% auto auto;
+  margin: 0 auto;
 }
 
 .socials-subtitle {
@@ -390,5 +418,13 @@ iframe {
   .about-text {
     font-size: 1.1rem;
     line-height: 1.55;
+  }
+
+  .hours-text {
+    font-size: 1.4rem;
+  }
+
+  .hours-list li {
+    font-size: 1.1rem;
   }
 }
