@@ -224,25 +224,34 @@ body {
 
 /* ==== GALLERY SECTION ==== */
 .gallery {
-  width: 1200px;
+  width: min(1200px, calc(100vw - 180px));
   display: flex;
   align-items: center;
   min-height: 30vh;
   overflow-x: scroll;
   padding: 20px 0px;
+  scroll-snap-type: x mandatory;
 }
 
 .carousel {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 40px) / 3);
+  gap: 20px;
   padding: 10px;
   flex: none;
 }
 
+.carousel span {
+  scroll-snap-align: start;
+}
+
 .carousel img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
   filter: grayscale(100%);
   transition: transform 0.5s;
 }
@@ -412,6 +421,16 @@ iframe {
   .about {
     padding: 0 16px;
   }
+
+   .gallery {
+    width: min(1200px, calc(100vw - 120px));
+  }
+
+  .button-back, .button-next {
+    width: 44px;
+    height: 44px;
+    margin: 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -426,5 +445,26 @@ iframe {
 
   .hours-list li {
     font-size: 1.1rem;
+  }
+
+  .gallery {
+    width: calc(100vw - 92px);
+    padding: 12px 0;
+  }
+
+  .carousel {
+    grid-auto-columns: 100%;
+    gap: 12px;
+    padding: 6px;
+  }
+
+  .carousel span {
+    scroll-snap-align: center;
+  }
+
+  .button-back, .button-next {
+    width: 38px;
+    height: 38px;
+    margin: 8px;
   }
 }
