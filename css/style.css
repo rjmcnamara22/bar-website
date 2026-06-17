@@ -402,20 +402,25 @@ iframe {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 12px 16px; /* reduced horizontal padding */
-  }
-
-  .logo {
-    font-size: 1.6rem; /* reduced logo size */
-    white-space: nowrap; /* still kept on a single line */
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
   }
 
   .nav-links {
-    gap: 14px; /* reduced spacing between links */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
   }
 
   .nav-links a {
-    font-size: 1.1rem; /* reduced link size */
+    font-size: 1.05rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+    white-space: nowrap;
   }
 
   .about-text {
