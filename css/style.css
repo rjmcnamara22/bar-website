@@ -14,7 +14,7 @@ body {
 
 /* === BACKGROUND COLORS === */
 .background-1 {
-  padding: 30px 0px;
+  padding: 20px 0px;
   background-color: #0f110f;
 }
 
@@ -56,6 +56,16 @@ body {
   max-width: 1200px;
   padding: 10px 16px;
   margin: auto;
+}
+
+.section-description {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #f7faf6;
 }
 
 /* ==== NAVBAR ==== */
@@ -170,25 +180,10 @@ body {
   max-width: 1200px;
 }
 
-.about-text {
-  text-align: center;
-  font-size: 1.6rem;
-  line-height: 1.8;
-  color: #f7faf6;
-}
-
 /* ==== MENU SECTION ==== */
 .menu {
   margin: auto;
   max-width: 1200px;
-}
-
-.menu-text {
-  text-align: center;
-  font-size: 1.6rem;
-  line-height: 1.8;
-  color: #f7faf6;
-  padding: 20px 0px;
 }
 
 .drink-menu-grid {
@@ -341,7 +336,6 @@ body {
 .contact-detail {
   font-size: 1.4rem;
   color: #f7faf6;
-  margin: 1% auto;
 }
 
 .map-embed {
@@ -353,6 +347,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  padding: 12px 0px;
 }
 
 iframe {
@@ -401,6 +396,13 @@ iframe {
 /* ============================= */
 
 @media (max-width: 768px) {
+  .section-description {
+    max-width: 620px;
+    padding: 14px 40px;
+    font-size: 1.25rem;
+    line-height: 1.55;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -421,15 +423,6 @@ iframe {
   .logo {
     font-size: 1.6rem;
     white-space: nowrap;
-  }
-
-  .about-text {
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .about {
-    padding: 0 16px;
   }
 
   .drink-menu-grid {
@@ -462,6 +455,12 @@ iframe {
 }
 
 @media (max-width: 480px) {
+  .section-description {
+    padding: 8px 28px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
   .about-text {
     font-size: 1.1rem;
     line-height: 1.55;
