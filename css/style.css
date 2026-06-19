@@ -231,70 +231,116 @@ body {
 }
 
 /* ==== GALLERY SECTION ==== */
-.gallery {
-  width: min(1200px, calc(100vw - 180px));
+.photo-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+.gallery-stage {
+  position: relative;
+}
+
+.gallery-viewport {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background-color: #111411;
+}
+
+.gallery-track {
+  height: 100%;
   display: flex;
   align-items: center;
-  min-height: 30vh;
-  overflow-x: scroll;
-  padding: 20px 0px;
-  scroll-snap-type: x mandatory;
+  gap: 8px;
+  transition: transform 0.45s ease;
+  will-change: transform;
 }
 
-.carousel {
-  width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 40px) / 3);
-  gap: 20px;
-  padding: 10px;
-  flex: none;
+.gallery-slide {
+  height: 100%;
+  width: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
+  opacity: 0.35;
+  filter: brightness(45%);
+  transition:
+    opacity 0.35s ease,
+    filter 0.35s ease;
 }
 
-.carousel span {
-  scroll-snap-align: start;
+.gallery-slide.active {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
 }
 
-.carousel img {
+/* Arrow buttons */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(180, 157, 52, 0.75);
+  border-radius: 50%;
+  background-color: rgba(15, 17, 15, 0.85);
+  color: #f7faf6;
+  cursor: pointer;
+  font-size: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-arrow:hover {
+  background-color: #b49d34;
+  color: #0f110f;
+}
+
+.gallery-arrow-left {
+  left: 18px;
+}
+
+.gallery-arrow-right {
+  right: 18px;
+}
+
+/* Thumbnail strip */
+.thumbnail-strip {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 14px 0 4px;
+  scrollbar-width: thin;
+}
+
+.thumbnail {
+  flex: 0 0 92px;
+  height: 62px;
+  padding: 0;
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.thumbnail.active {
+  border-color: #b49d34;
+  opacity: 1;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: 4 / 3;
-  filter: grayscale(100%);
-  transition: transform 0.5s;
-}
-
-.carousel img:hover {
-  filter: grayscale(0);
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.gallery::-webkit-scrollbar {
-  display: none;
-}
-
-.gallery-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-.button-back,
-.button-next {
-  background-color: #dddddd;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 30px;
-}
-
-.button-icon {
-  font-size: 1.4rem;
-  display: inline-flex;
-  align-items: center;
+  display: block;
 }
 
 /* ==== HOURS SECTION ==== */
@@ -442,16 +488,32 @@ iframe {
     font-size: 1.2rem;
   }
 
-  .gallery {
-    width: min(1200px, calc(100vw - 120px));
+  .photo-gallery {
+    padding: 16px 16px 32px;
   }
-}
 
-.button-back,
-.button-next {
-  width: 44px;
-  height: 44px;
-  margin: 14px;
+  .gallery-viewport {
+    height: 390px;
+  }
+
+  .gallery-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.45rem;
+  }
+
+  .gallery-arrow-left {
+    left: 10px;
+  }
+
+  .gallery-arrow-right {
+    right: 10px;
+  }
+
+  .thumbnail {
+    flex-basis: 78px;
+    height: 56px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -491,25 +553,22 @@ iframe {
     font-size: 1.1rem;
   }
 
-  .gallery {
-    width: calc(100vw - 92px);
-    padding: 12px 0;
+  .gallery-viewport {
+    height: 280px;
   }
 
-  .carousel {
-    grid-auto-columns: 100%;
-    gap: 12px;
-    padding: 6px;
+  .gallery-track {
+    gap: 6px;
   }
 
-  .carousel span {
-    scroll-snap-align: center;
+  .gallery-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
   }
 
-  .button-back,
-  .button-next {
-    width: 38px;
-    height: 38px;
-    margin: 8px;
+  .thumbnail {
+    flex-basis: 68px;
+    height: 50px;
   }
 }
