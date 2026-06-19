@@ -33,8 +33,6 @@ bar-website/
 ├── images/
 │   ├── pub-hero.jpg
 │   ├── pub-hero-blurred.png
-│   ├── drink-menu-page-1.png
-│   ├── drink-menu-page-2.png
 │   └── ...
 └── CNAME
 ```
