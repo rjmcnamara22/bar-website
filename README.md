@@ -1,6 +1,6 @@
 # McNamara's Pub Website
 
-A static, single-page website for **McNamara's Pub**.
+A static, single-page website for **McNamara's Pub**. ([mcnamaraspublichouse.com](https://mcnamaraspublichouse.com/))
 
 ## Overview
 
