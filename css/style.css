@@ -437,6 +437,61 @@ iframe {
   font-size: 1rem;
 }
 
+/* ==== DISMISSABLE POPUP ==== */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.popup-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-heading {
+  font-size: 2rem;
+  color: #f7faf6;
+}
+
+.popup-description {
+  font-size: 1.4rem;
+  color: #f7faf6;
+  margin: 1rem 0;
+}
+
+.popup-modal {
+  background: #212221;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.popup-cta:hover {
+  background: #e85a2a;
+}
+
 /* ============================= */
 /* ==== RESPONSIVE / MOBILE ==== */
 /* ============================= */
