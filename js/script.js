@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const thumbnailCenter =
       activeThumbnail.offsetLeft + activeThumbnail.offsetWidth / 2;
+
     const thumbnailScrollPosition =
       thumbnailCenter - thumbnailStrip.clientWidth / 2;
 
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
+
       document.querySelector(this.getAttribute("href")).scrollIntoView({
         behavior: "smooth",
       });
@@ -133,10 +135,14 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", closePopup);
 
   overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) closePopup();
+    if (e.target === overlay) {
+      closePopup();
+    }
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePopup();
+    if (e.key === "Escape") {
+      closePopup();
+    }
   });
 });
